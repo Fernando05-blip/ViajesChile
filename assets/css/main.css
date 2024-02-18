@@ -1,1 +1,25 @@
 /* CSS personalizado */
+/* Estilos Globales */
+body{
+    font-family: "Montserrat", sans-serif;
+    color: #fff;
+    font-weight: 200;
+    font-size: 0.8rem;
+    background-color: #010103;
+}
+a{
+    font-family: "Montserrat", sans-serif;
+}
+
+#carouselExample{
+    height: 100vh;
+}
+.carousel-inner{
+    height: 100%;
+}
+.quienesSomos{
+    background-color: #010103;
+}
+.icon{
+    font-size: 1.4rem;
+}
