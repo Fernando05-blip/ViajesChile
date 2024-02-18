@@ -25,17 +25,23 @@
 
     <!-- CSS Personalizado -->
     <link rel="stylesheet" href="assets/css/main.css">
+
+    <!-- Jquery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <!-- JS perosonalizado -->
+    <link rel="stylesheet" href="assets/js/funciones.js">
 </head>
 <body>
-    <header class="container fixed-top">
+    <header id="header"  class="container fixed-top">
         <nav class="navbar navbar-expand-lg bg-transparent ">
             <div class="container-fluid">
-              <a class="navbar-brand text-white" href="#"><img src="assets/img/viajes.svg" alt="Logo" width="40px"> Viajes Chile</a>
+              <a id="logo" class="navbar-brand text-white" href="#"><img src="assets/img/viajes.svg" alt="Logo" width="40px"> Viajes Chile</a>
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
               </button>
-              <div class="collapse navbar-collapse text-white d-flex flex-row-reverse" id="navbarNav">
-                <ul class="navbar-nav">
+              <div class="collapse navbar-collapse text-white" id="navbarNav">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                   <li class="nav-item">
                     <a class="nav-link text-white" href="#inicio">Inicio</a>
                   </li>
@@ -56,7 +62,7 @@
 
     <!-- Slider -->
     <section id="inicio" class="hero container-fluid p-0 m-0 ">
-        <div id="carouselExample" class="carousel slide ">
+        <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-inner">
               <div class="carousel-item active">
                 <img src="assets/img/carousel1.jpg" class="d-block w-100" alt="...">
@@ -104,7 +110,7 @@
                             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptate quo, quasi vitae explicabo quisquam sint, reiciendis numquam, fuga magni itaque ipsum at. Aperiam fugit totam quis ratione numquam, porro quaerat?
                     </p>
                     <div class="icon text-center bg-primary p-1 my-2">
-                        <i class="fa-solid fa-mountain"></i>
+                            <i class="fa-solid fa-mountain"></i>
                     </div>
                     </div>
                     <div class="col-4">
@@ -131,8 +137,17 @@
         <div class="container">
         <div class="row row-cols-1 row-cols-md-4 g-4">
             <div class="col">
-              <div class="card h-100">
-                <img src="assets/img/card1.jpg" class="card-img-top" alt="...">
+              <div class="card h-100" data-bs-toggle="tooltip" data-bs-title="Lorem ipsum" data-bs-custom-class="custom-tooltip">
+                <img src="assets/img/card1.jpg" class="card-img-top" alt="montañas...">
+                <div class="card-body bg-primary text-white">
+                  <h5 class="card-title">Lorem Ipsus</h5>
+                  <p class="card-text" >This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card h-100" data-bs-toggle="tooltip" data-bs-title="lorem ipsum" data-bs-custom-class="custom-tooltip">
+                <img src="assets/img/card2.jpg" class="card-img-top" alt="Río...">
                 <div class="card-body bg-primary text-white">
                   <h5 class="card-title">Lorem Ipsus</h5>
                   <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
@@ -140,17 +155,8 @@
               </div>
             </div>
             <div class="col">
-              <div class="card h-100">
-                <img src="assets/img/card2.jpg" class="card-img-top" alt="...">
-                <div class="card-body bg-primary text-white">
-                  <h5 class="card-title">Lorem Ipsus</h5>
-                  <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                </div>
-              </div>
-            </div>
-            <div class="col">
-              <div class="card h-100">
-                <img src="assets/img/card3.jpg" class="card-img-top" alt="...">
+              <div class="card h-100" data-bs-toggle="tooltip" data-bs-title="Lorem ipsum" data-bs-custom-class="custom-tooltip">
+                <img src="assets/img/card3.jpg" class="card-img-top" alt="Lago...">
                 <div class="card-body bg-primary text-white">
                   <h5 class="card-title">Lorem Ipsus</h5>
                   <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
@@ -158,8 +164,8 @@
               </div>
             </div>
             <div class="col">
-              <div class="card h-100">
-                <img src="assets/img/card4.jpg" class="card-img-top" alt="...">
+              <div class="card h-100" data-bs-toggle="tooltip" data-bs-title="Lorem ipsum" data-bs-custom-class="custom-tooltip">
+                <img src="assets/img/card4.jpg" class="card-img-top" alt="Selva...">
                 <div class="card-body bg-primary text-white">
                   <h5 class="card-title">Lorem Ipsus</h5>
                   <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
@@ -206,10 +212,10 @@
     </section>
     <footer class="container-fluid bg-primary py-2">
          <div class="row">
-            <div class="col-6 text-center d-flex align-items-center justify-content-center">
+            <div class="col-lg-6 text-center d-flex align-items-center justify-content-center">
                 <h4>VIAJES CHILE</h4>
             </div>
-            <div class="col-6">
+            <div class="col-lg-6">
                 <div class="row">
                 <ul class="list-group list-group-horizontal d-flex align-items-center justify-content-center ">
                     <li class="list-group-item text-white text-center bg-primary border-0 fs-2">
@@ -229,5 +235,19 @@
             </div>
          </div>
     </footer>
+    <script>
+        const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+        const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl)) 
+           
+    </script>
+    <script>
+        $(window).scroll(function () { 
+    if ($("#header").offset().top >60){
+        $("#header").addClass("bg-color");
+    } else{
+        $("#header").removeClass("bg-color");
+    }
+});
+    </script>
 </body>
 </html>

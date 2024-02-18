@@ -23,3 +23,22 @@ a{
 .icon{
     font-size: 1.4rem;
 }
+.custom-tooltip {
+    --bs-tooltip-bg: #fff;
+    --bs-tooltip-color: #000;
+  }
+  .bg-color{
+    background-color: #fff !important;
+    color: #000 !important;
+    transition: all 0.5s ease-in-out ;
+  }
+  .bg-color a{
+    color: #000 !important;
+  }
+
+  /* Media Query */
+@media (max-width: 767.98px) { 
+    #carouselExample {
+        height: auto !important;
+    }
+}
