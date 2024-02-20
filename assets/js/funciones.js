@@ -8,3 +8,4 @@
         $("#header").removeClass("bg-color");
     }
 });
+console.log
